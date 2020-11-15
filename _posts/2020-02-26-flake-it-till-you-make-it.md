@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Flake it till you make it
-subtitle: Excerpt from Soulshaping by Jeff Brown
-cover-img: /assets/img/path.jpg
-thumbnail-img: /assets/img/thumb.png
-share-img: /assets/img/path.jpg
-tags: [books, test]
+title: Unusual Things in Machine Learning and Data Science (Running list)
+tags: [ml, machine-learning, list]
 ---
+Every now and then, I stumble across unusual, contradictory, or just plain 'that can't be right' results in my work, and I never really document them. I'd like to change that! This is a running list of things that meet my own criteria for strangeness. Many of these may have perfectly reasonable explanations and/or would be obvious to others, but I personally found them to be unintuitive. 
 
-Under what circumstances should we step off a path? When is it essential that we finish what we start? If I bought a bag of peanuts and had an allergic reaction, no one would fault me if I threw it out. If I ended a relationship with a woman who hit me, no one would say that I had a commitment problem. But if I walk away from a seemingly secure route because my soul has other ideas, I am a flake?
-
-The truth is that no one else can definitively know the path we are here to walk. It’s tempting to listen—many of us long for the omnipotent other—but unless they are genuine psychic intuitives, they can’t know. All others can know is their own truth, and if they’ve actually done the work to excavate it, they will have the good sense to know that they cannot genuinely know anyone else’s. Only soul knows the path it is here to walk. Since you are the only one living in your temple, only you can know its scriptures and interpretive structure.
-
-At the heart of the struggle are two very different ideas of success—survival-driven and soul-driven. For survivalists, success is security, pragmatism, power over others. Success is the absence of material suffering, the nourishing of the soul be damned. It is an odd and ironic thing that most of the material power in our world often resides in the hands of younger souls. Still working in the egoic and material realms, they love the sensations of power and focus most of their energy on accumulation. Older souls tend not to be as materially driven. They have already played the worldly game in previous lives and they search for more subtle shades of meaning in this one—authentication rather than accumulation. They are often ignored by the culture at large, although they really are the truest warriors.
-
-A soulful notion of success rests on the actualization of our innate image. Success is simply the completion of a soul step, however unsightly it may be. We have finished what we started when the lesson is learned. What a fear-based culture calls a wonderful opportunity may be fruitless and misguided for the soul. Staying in a passionless relationship may satisfy our need for comfort, but it may stifle the soul. Becoming a famous lawyer is only worthwhile if the soul demands it. It is an essential failure if you are called to be a monastic this time around. If you need to explore and abandon ten careers in order to stretch your soul toward its innate image, then so be it. Flake it till you make it.
+1. Platt-scaled non-LR models may yield MUCH better calibration results compared to an LR model, even when the accuracies of the two are identical. (11/5/2020)
+  * More specifically, lets say you have two classifiers: a gradient-boosted tree and a logistic-regression. The former obviously gives poorly calibrated results, the latter (is supposed) to give well-calibrated results. And lets say that, because we have a relatively simple dataset, the metrics between the two are identical. However, if you platt-scale the gradient boosted tree, what you may find is massively better calibration compared to the logistic-regression. Personally, I would've expected nearly identical calibration results given that the metrics between the two are the same. 
+  
+  
+2. Emebedding layers are mathmatically identical to one-hot encoding categorical inputs + dense layers. The only difference is in computational/memory expense. (11/5/2020)
+  * [Here's a more in-depth explanation](https://stackoverflow.com/questions/47868265/what-is-the-difference-between-an-embedding-layer-and-a-dense-layer). Obvious after thinking a bit about it, but I always assumed there was something extra going on in the embedding layers. 
+  
+ 
+3. Using shallow copies of lists in a Spark UDF's *will* lead to nondeterministic behavior that is extremely difficult to track down. (11/5/2020)
+  * So, we all know that doing `[[]] * 5` in Python will lead to five nested lists that all belong to the same memory address, but at least I sometimes forget that, write it anyway, and discover the bug via all the sublists being the same in the utput. Harmless little bug that is easy to find. However, if you use this code in a Spark UDF, whatever distributed computing magic it's doing under the hood makes the ouput look *insane*. Like, rows containing data from other rows insane. I once spent 3 weeks trying to find out what exactly was going on before a very helpful engineer pointed out that it may be a memory address issue. 
