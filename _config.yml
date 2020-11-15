@@ -14,7 +14,6 @@ author: Abhishaike Mahajan
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  home: "https://abhishaike.github.io/"
   about: "aboutme"
 
 # --- Logo --- #
@@ -40,7 +39,7 @@ social-network-links:
   github: Abhishaike
   instagram: abuuty.art
   twitter: abuutyshake
-  google-scholar: your google scholar
+  google-scholar: fSyeqzAAAAAJ
 
 # If you want to show a link to an RSS in the footer, add the site description here.
 # If you don't want to show an RSS link, remove the following line.
@@ -52,7 +51,6 @@ social-network-links:
 share-links-active:
   twitter: true
   linkedin: true
-  vk: true
   google-scholar: true
 
 # How to display the link to your website in the footer
