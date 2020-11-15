@@ -14,7 +14,7 @@ author: Abhishaike Mahajan
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  home: https://abhishaike.github.io/
+  home: "https://abhishaike.github.io/"
   about: "aboutme"
 
 # --- Logo --- #
