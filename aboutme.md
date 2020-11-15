@@ -1,16 +1,15 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+I'm currently an ML scientist at [anthem.ai](https:/anthem.ai), working on applied clinical research problems using EHR's. 
 
-What else do you need?
+In the past, I was a data scientist at [Beyond Limits](https:/beyond.ai), and did research internships at [toSense](https://www.tosense.com/) and [Maxim Integrated](https://www.maximintegrated.com/en.html). 
 
-### My story
+I also did some fun medical imaging AI work with [Dr. Baowei Fei](https://be.utdallas.edu/people/faculty/baowei-fei/) and neurostimulation work with [Dr. Michael Kilgard](https://bbs.utdallas.edu/faculty/detail.php5?i=311) during my undergrad, which was in Cognitive Science from UT-Dallas. 
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+I also draw whenever I have the motivation, primarily with either pen or digital. 
+
+My research can be found on my [Google Scholar](https://scholar.google.com/citations?user=fSyeqzAAAAAJ&hl=en).
